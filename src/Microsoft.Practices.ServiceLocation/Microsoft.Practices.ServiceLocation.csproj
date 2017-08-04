@@ -12,7 +12,7 @@
     <Description>This library is a .NET Standard port of CommonServiceLocator (https://www.nuget.org/packages/CommonServiceLocator/).</Description>
     <PackageTags>CommonServiceLocator, ServiceLocation, Microsoft.Practices.ServiceLocation, NetStandard</PackageTags>
     <Copyright />
-    <PackageLicenseUrl>https://github.com/aliencube/commonservicelocator</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/aliencube/commonservicelocator/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/aliencube/commonservicelocator</PackageProjectUrl>
     <RepositoryUrl>https://github.com/aliencube/commonservicelocator</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
