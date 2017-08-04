@@ -1,8 +1,8 @@
 # dev only
 -
   environment:
-    package_semantic_version: 1.0.6
-    assembly_semantic_version: 1.0.6
+    package_semantic_version: 1.0.7
+    assembly_semantic_version: 1.0.7
     solution_name: commonservicelocator
   version: $(package_semantic_version).{build}
   pull_requests:
@@ -45,8 +45,8 @@
 # release Only
 -
   environment:
-    package_semantic_version: 1.0.6
-    assembly_semantic_version: 1.0.6
+    package_semantic_version: 1.0.7
+    assembly_semantic_version: 1.0.7
     solution_name: commonservicelocator
   version: $(package_semantic_version).{build}
   pull_requests:
