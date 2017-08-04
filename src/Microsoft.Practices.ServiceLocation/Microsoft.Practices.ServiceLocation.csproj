@@ -5,18 +5,21 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageId>Aliencube.CommonServiceLocator</PackageId>
-    <Authors>Aliencube</Authors>
+    <Owners>Aliencube</Owners>
+    <Authors>Microsoft</Authors>
     <Company>Microsoft</Company>
     <Version>1.0.0</Version>
+    <Title>CommonServiceLocator for .NET Standard</Title>
     <Product>CommonServiceLocator for .NET Standard</Product>
-    <Description>This library is a .NET Standard port of CommonServiceLocator (https://www.nuget.org/packages/CommonServiceLocator/).</Description>
+    <Summary>This library is a .NET Standard port of CommonServiceLocator (https://www.nuget.org/packages/CommonServiceLocator/).</Summary>
+    <Description>.NET Standard port of this Common Service Locator library contains a shared interface for service location which application and framework developers can reference. The library provides an abstraction over IoC containers and service locators. Using the library allows an application to indirectly access the capabilities without relying on hard references. The hope is that using this library, third-party applications and frameworks can begin to leverage IoC/Service Location without tying themselves down to a specific implementation.</Description>
     <PackageTags>CommonServiceLocator, ServiceLocation, Microsoft.Practices.ServiceLocation, NetStandard</PackageTags>
     <Copyright />
     <PackageLicenseUrl>https://github.com/aliencube/commonservicelocator/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/aliencube/commonservicelocator</PackageProjectUrl>
     <RepositoryUrl>https://github.com/aliencube/commonservicelocator</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>The Common Service Locator library contains a shared interface for service location which application and framework developers can reference. The library provides an abstraction over IoC containers and service locators. Using the library allows an application to indirectly access the capabilities without relying on hard references. The hope is that using this library, third-party applications and frameworks can begin to leverage IoC/Service Location without tying themselves down to a specific implementation.</PackageReleaseNotes>
+    <PackageReleaseNotes />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

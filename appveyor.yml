@@ -25,7 +25,7 @@
   dotnet_csproj:
     patch: true
     file: '**\*.csproj'
-    version: '{version}'
+    version: '$(package_semantic_version).0'
     package_version: '$(package_semantic_version).0'
   nuget:
     disable_publish_on_pr: true
@@ -59,7 +59,7 @@
   dotnet_csproj:
     patch: true
     file: '**\*.csproj'
-    version: '{version}'
+    version: '$(package_semantic_version).0'
     package_version: '$(package_semantic_version).0'
   nuget:
     disable_publish_on_pr: true
