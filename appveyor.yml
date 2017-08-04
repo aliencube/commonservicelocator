@@ -1,0 +1,36 @@
+# DEV branch only
+-
+  environment:
+    package_semantic_version: 1.0.4
+    assembly_semantic_version: 1.0.4
+    solution_name: commonservicelocator
+  version: $(package_semantic_version).{build}
+  pull_requests:
+    do_not_increment_build_number: true
+  branches:
+    only:
+    - dev
+  image: Visual Studio 2017
+  configuration: Release
+  platform: Any CPU
+  dotnet_csproj:
+    patch: true
+    file: '**\*.csproj'
+    version: '{version}'
+    package_version: '$(package_semantic_version).0'
+  nuget:
+    account_feed: true
+    disable_publish_on_pr: true
+  before_build:
+  - cmd: nuget.exe restore .\$(solution_name).sln -Verbosity Detailed -NonInteractive
+  build:
+    project: .\$(solution_name).sln
+    publish_nuget: true
+    publish_nuget_symbols: true
+    verbosity: minimal
+  artifacts:
+  - path: .\src\Microsoft.Practices.ServiceLocation\**\*.nupkg
+    name: commonservicelocator
+  deploy:
+  - provider: Environment
+    name: NuGet for CommonServiceLocator
