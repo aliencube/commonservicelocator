@@ -12,13 +12,13 @@
   skip_commits:
     files:
       - .gitignore
-      # - appveyor.yml
+      - appveyor.yml
       - LICENSE
       - README.md
       - Settings.StyleCop
       - commonservicelocator.sln
       - commonservicelocator.sln.DotSettings
-      # - '**/*.csproj'
+      - '**/*.csproj'
   image: Visual Studio 2017
   configuration: Debug
   platform: Any CPU
@@ -29,21 +29,13 @@
     package_version: '$(package_semantic_version).0'
   nuget:
     disable_publish_on_pr: true
-  before_build:
-  - cmd: nuget.exe restore .\commonservicelocator.sln -Verbosity Detailed -NonInteractive
-  build:
-    publish_nuget: true
-    publish_nuget_symbols: true
-    verbosity: minimal
-  artifacts:
-  - path: .\src\Microsoft.Practices.ServiceLocation\**\*.nupkg
-    name: commonservicelocator
+  build_script:
+  - ps: .\build-solution.ps1 -Configuration $env:configuration -Platform $env:platform
 
 # release Only
 -
   environment:
     package_semantic_version: 1.0.7
-    solution_name: commonservicelocator
   version: $(package_semantic_version).{build}
   pull_requests:
     do_not_increment_build_number: true
@@ -54,13 +46,13 @@
   skip_commits:
     files:
       - .gitignore
-      # - appveyor.yml
+      - appveyor.yml
       - LICENSE
       - README.md
       - Settings.StyleCop
       - commonservicelocator.sln
       - commonservicelocator.sln.DotSettings
-      # - '**/*.csproj'
+      - '**/*.csproj'
   image: Visual Studio 2017
   configuration: Release
   platform: Any CPU
@@ -71,12 +63,8 @@
     package_version: '$(package_semantic_version).0'
   nuget:
     disable_publish_on_pr: true
-  before_build:
-  - cmd: nuget.exe restore .\commonservicelocator.sln -Verbosity Detailed -NonInteractive
-  build:
-    publish_nuget: true
-    publish_nuget_symbols: true
-    verbosity: minimal
+  build_script:
+  - ps: .\build-solution.ps1 -Configuration $env:configuration -Platform $env:platform
   artifacts:
   - path: .\src\Microsoft.Practices.ServiceLocation\**\*.nupkg
     name: commonservicelocator
