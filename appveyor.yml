@@ -12,13 +12,13 @@
   skip_commits:
     files:
       - .gitignore
-#      - appveyor.yml
+      # - appveyor.yml
       - LICENSE
       - README.md
       - Settings.StyleCop
       - commonservicelocator.sln
       - commonservicelocator.sln.DotSettings
-      - '**/*.csproj'
+      # - '**/*.csproj'
   image: Visual Studio 2017
   configuration: Debug
   platform: Any CPU
@@ -28,7 +28,6 @@
     version: '{version}'
     package_version: '$(package_semantic_version).0'
   nuget:
-    account_feed: true
     disable_publish_on_pr: true
   before_build:
   - cmd: nuget.exe restore .\commonservicelocator.sln -Verbosity Detailed -NonInteractive
@@ -55,13 +54,13 @@
   skip_commits:
     files:
       - .gitignore
-#      - appveyor.yml
+      # - appveyor.yml
       - LICENSE
       - README.md
       - Settings.StyleCop
       - commonservicelocator.sln
       - commonservicelocator.sln.DotSettings
-      - '**/*.csproj'
+      # - '**/*.csproj'
   image: Visual Studio 2017
   configuration: Release
   platform: Any CPU
@@ -71,7 +70,6 @@
     version: '{version}'
     package_version: '$(package_semantic_version).0'
   nuget:
-    account_feed: true
     disable_publish_on_pr: true
   before_build:
   - cmd: nuget.exe restore .\commonservicelocator.sln -Verbosity Detailed -NonInteractive
