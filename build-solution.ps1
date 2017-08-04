@@ -22,6 +22,6 @@ Write-Host "commonservicelocator.sln built" -ForegroundColor Green
 
 Write-Host "Building NuGet package..." -ForegroundColor Green
 
-dotnet pack .\src\Microsoft.Practices.ServiceLocation\Microsoft.Practices.ServiceLocation.csproj --configuration $Configuration --include-symbols --no-build --output "bin\$Configuration"
+# dotnet pack .\src\Microsoft.Practices.ServiceLocation\Microsoft.Practices.ServiceLocation.csproj --configuration $Configuration --include-symbols --no-build --output "bin\$Configuration"
 
 Write-Host "NuGet package built" -ForegroundColor Green
