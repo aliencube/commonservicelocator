@@ -2,8 +2,6 @@
 -
   environment:
     package_semantic_version: 1.0.7
-    assembly_semantic_version: 1.0.7
-    solution_name: commonservicelocator
   version: $(package_semantic_version).{build}
   pull_requests:
     do_not_increment_build_number: true
@@ -22,7 +20,7 @@
       - commonservicelocator.sln.DotSettings
       - '**/*.csproj'
   image: Visual Studio 2017
-  configuration: Release
+  configuration: Debug
   platform: Any CPU
   dotnet_csproj:
     patch: true
@@ -33,7 +31,7 @@
     account_feed: true
     disable_publish_on_pr: true
   before_build:
-  - cmd: nuget.exe restore .\$(solution_name).sln -Verbosity Detailed -NonInteractive
+  - cmd: nuget.exe restore .\commonservicelocator.sln -Verbosity Detailed -NonInteractive
   build:
     publish_nuget: true
     publish_nuget_symbols: true
@@ -46,7 +44,6 @@
 -
   environment:
     package_semantic_version: 1.0.7
-    assembly_semantic_version: 1.0.7
     solution_name: commonservicelocator
   version: $(package_semantic_version).{build}
   pull_requests:
@@ -77,7 +74,7 @@
     account_feed: true
     disable_publish_on_pr: true
   before_build:
-  - cmd: nuget.exe restore .\$(solution_name).sln -Verbosity Detailed -NonInteractive
+  - cmd: nuget.exe restore .\commonservicelocator.sln -Verbosity Detailed -NonInteractive
   build:
     publish_nuget: true
     publish_nuget_symbols: true
