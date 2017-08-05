@@ -1,5 +1,8 @@
 # CommonServiceLocator for .NET Standard #
 
+[![](https://img.shields.io/nuget/dt/Aliencube.CommonServiceLocator.svg)](https://www.nuget.org/packages/Aliencube.CommonServiceLocator/)
+[![](https://img.shields.io/nuget/v/Aliencube.CommonServiceLocator.svg)](https://www.nuget.org/packages/Aliencube.CommonServiceLocator/)
+
 This library is a .NET Standard port of [CommonServiceLocator](https://www.nuget.org/packages/CommonServiceLocator/).
 
 The Common Service Locator library contains a shared interface for service location which application and framework developers can reference. The library provides an abstraction over IoC containers and service locators. Using the library allows an application to indirectly access the capabilities without relying on hard references. The hope is that using this library, third-party applications and frameworks can begin to leverage IoC/Service Location without tying themselves down to a specific implementation.
